@@ -13,8 +13,16 @@ const HeroSection = styled.section`
     display: flex;
     overflow: hidden;
     position: relative;
-`;
+    flex: 1;
 
+`;
+const SliderButtons = styled.div`
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    z-index: 100;
+`;
 const HeroWrapper = styled.div`
     width: 100%;
     height: 100%;
@@ -23,33 +31,37 @@ const HeroWrapper = styled.div`
     align-items: center;
     overflow: hidden;
     position: relative;
+
 `;
 
 const HeroSlide = styled.div`
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 20;
     width: 100%;
     height: 100%;
 `;
 const HeroSlider = styled.div`
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    display: block;
+    display: flex
     align-items: center;
     justify-content: center;
 
     &::before{
         content: '';
         position: absolute;
-        width: 100%
+        width: 100%;
         height: 100vh;
-        top: 0vh;
-        left: 0px;
+        bottom: 0;
+        left: 0;
         overflow: hidden;
         opacity: 0.4;
+        z-index: 1;
         background: linear-gradient(
             0deg,
             rgba(0,0,0,0.9) 0%,
@@ -59,7 +71,9 @@ const HeroSlider = styled.div`
     }
 `;
 const HeroImage = styled.img`
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -69,9 +83,11 @@ const HeroContent = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     max-width: 1600px;
     width: calc(100%-100px);
-    z-index: 10;
+    z-index: 20;
     color: #fff;
 `;
 
@@ -98,13 +114,7 @@ const PrevArrow = styled(IoArrowBack)`
 const NextArrow = styled(IoArrowForward)`
     ${arrowButtons}
 `;
-const SliderButtons = styled.div`
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    display: flex;
-    z-index: 10;
-`;
+
 
 const Hero =()=>{
     return (

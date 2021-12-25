@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled, {css} from 'styled-components'
 import {SliderData} from '../data/SliderData'
 import {Button} from './Button'
@@ -41,6 +41,7 @@ const HeroSlide = styled.div`
     z-index: 20;
     width: 100%;
     height: 100%;
+    display:${({show})=>(show?'initial':'none')}
 `;
 const HeroSlider = styled.div`
     position: absolute;
@@ -91,14 +92,17 @@ const HeroContent = styled.div`
     color: #fff;
 `;
 
-const Arrow = styled(IoMdArrowRoundForward)``;
+const Arrow = styled(IoMdArrowRoundForward)`
+    margin-left: 0.5rem;
+`;
 const arrowButtons = css`
     width: 50px;
     height: 50px;
     color: #fff;
     cursor: pointer;
     background: #000;
-    border-radius: 10px;
+    border-radius: 50px;
+    padding: 10px;
     margine-right: 1rem;
     user-select: none;
     transition: 0.3s;
@@ -117,30 +121,57 @@ const NextArrow = styled(IoArrowForward)`
 
 
 const Hero =()=>{
+    const [current, setCurrent] = useState(0)
+    const length = SliderData.length
+    const timeout = useRef(null)
+
+    // useEffect(()=>{
+    //     const nextSlide = () =>{
+    //         setCurrent(current=>(current === length-1?0:current+1))
+    //     }
+    //     timeout.current = setTimeout(nextSlide, 5000)
+    //     console.log(timeout.current)
+    //     return function (){
+    //         if(timeout.current){
+    //             clearTimeout(timeout.current)
+    //         }
+    //     }
+    // },[current, length])
+    const nextSlide = () => {
+        if(timeout.current) clearTimeout(timeout.current)
+        setCurrent(current === length-1?0:current+1)
+    }
+    const prevSlide = () => {
+        if(timeout.current) clearTimeout(timeout.current)
+        setCurrent(current === 0?length-1:current-1)
+    }
+
     return (
         <HeroSection>
             <HeroWrapper>
                 {SliderData.map((slide,index)=>{
                     return (
-                    <HeroSlide key={index}>
-                        <HeroSlider>
-                            <HeroImage src={slide.img} alt={slide.alt}/>
-                            <HeroContent>
-                                <h1>{slide.title}</h1>
-                                <p>{slide.description}</p>
-                                <Button to={slide.path} primary="true"
-                                css={`max-width: 160px`}>
-                                    {slide.label}
+                    <HeroSlide key={index} show={index === current}>
+                        {index === current && (
+                            <HeroSlider>
+                                <HeroImage src={slide.img} alt={slide.alt}/>
+                                <HeroContent>
+                                    <h1>{slide.title}</h1>
+                                    <p>{slide.description}</p>
+                                    <Button to={slide.path} primary="true"
+                                    css={`max-width: 160px`}>
+                                        {slide.label}
                                     <Arrow />
-                                </Button>
-                            </HeroContent>
-                        </HeroSlider>
+                                    </Button>
+                                </HeroContent>
+                            </HeroSlider>
+                        )}
                     </HeroSlide>
                 );
                 })}
                 <SliderButtons>
-                    <PrevArrow />
-                    <NextArrow />
+                    <PrevArrow onClick={prevSlide}/>
+                    <NextArrow onClick={nextSlide}/>
                 </SliderButtons>
             </HeroWrapper>
         </HeroSection>

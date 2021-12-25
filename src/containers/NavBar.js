@@ -63,11 +63,11 @@ const NavBtn = styled.div`
         display: none;
     }
 `;
-const NavBar =()=>{
+const NavBar =({toggle})=>{
     return (
         <Nav>
             <Home to='/'>Darsh Kachroo</Home>
-            <MenuBar />
+            <MenuBar onClick={toggle} />
             <NavMenu>
                 {menuData.map((item,index)=>(
                     <NavMenuLinks to={item.link} key={index}>

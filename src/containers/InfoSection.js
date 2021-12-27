@@ -15,7 +15,7 @@ const Container = styled.div`
     grid-template-rows: 800px;
 
     @media screen and (max-width: 768px){
-        grid-template-column: 1fr;
+        grid-template-columns: 1fr;
     }
 `;
 const ColumnLeft = styled.div`

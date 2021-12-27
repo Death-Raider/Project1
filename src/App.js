@@ -14,9 +14,9 @@ const App =()=>{
         <>
             <GlobalStyle />
             <NavBar toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero />
             <InfoSection {...[InfoData]} />
+            <Dropdown isOpen={isOpen} toggle={toggle} />
         </>
     )
 }

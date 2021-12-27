@@ -7,7 +7,7 @@ import {Button} from './Button'
 import { FaBars } from 'react-icons/fa'
 
 const Nav = styled.div`
-    background: none;
+    background: rgba(230,230,230,60%);
     display: flex;
     justify-content: space-between;
     padding: 1rem 1rem;
@@ -16,7 +16,7 @@ const Nav = styled.div`
     width: 100%;
 `;
 const NavLink = css`
-    color: #fff;
+    color: #000;
     display: flex;
     align-items: center;
     padding: 0rem 1rem;

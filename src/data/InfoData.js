@@ -5,8 +5,8 @@ import Image4 from '../images/image4.png'
 
 export const InfoData = [{
         Heading: 'Heading 1',
-        Para1: "hivjhhhbdwhjdvihbjhvjfbjh vfjijbvfinjbvfnvjbivnjbvfdinjb",
-        Para2: "pnvcadivhuweiruyhbajcn uivebjndk hiuvbsjfnkdlvhsbjhbjksv",
+        Para1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
+        Para2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
         BtnLabel:"btn1",
         link:"/project1",
         image: Image1,
@@ -15,8 +15,8 @@ export const InfoData = [{
     },
     {
         Heading: 'Heading 2',
-        Para1: "hivjhhhbdwhjdvihbjhvjfbjh vfjijbvfinjbvfnvjbivnjbvfdinjb",
-        Para2: "pnvcadivhuweiruyhbajcn uivebjndk hiuvbsjfnkdlvhsbjhbjksv",
+        Para1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
+        Para2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
         BtnLabel:"btn2",
         link:"/project2",
         image: Image2,
@@ -25,8 +25,8 @@ export const InfoData = [{
     },
     {
         Heading: 'Heading 3',
-        Para1: "hivjhhhbdwhjdvihbjhvjfbjh vfjijbvfinjbvfnvjbivnjbvfdinjb",
-        Para2: "pnvcadivhuweiruyhbajcn uivebjndk hiuvbsjfnkdlvhsbjhbjksv",
+        Para1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
+        Para2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
         BtnLabel:"btn3",
         link:"/project3",
         image: Image3,
@@ -35,8 +35,8 @@ export const InfoData = [{
     },
     {
         Heading: 'Heading 4',
-        Para1: "hivjhhhbdwhjdvihbjhvjfbjh vfjijbvfinjbvfnvjbivnjbvfdinjb",
-        Para2: "pnvcadivhuweiruyhbajcn uivebjndk hiuvbsjfnkdlvhsbjhbjksv",
+        Para1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
+        Para2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." ,
         BtnLabel:"btn4",
         link:"/project4",
         image: Image4,

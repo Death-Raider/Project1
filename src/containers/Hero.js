@@ -137,6 +137,7 @@ const Hero =()=>{
     //         }
     //     }
     // },[current, length])
+
     const nextSlide = () => {
         if(timeout.current) clearTimeout(timeout.current)
         setCurrent(current === length-1?0:current+1)

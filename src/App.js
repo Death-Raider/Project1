@@ -5,6 +5,7 @@ import InfoSection from './containers/InfoSection'
 import Dropdown from './containers/Dropdown'
 import {BrowserRouter as Router} from 'react-router-dom'
 import GlobalStyle from './globalStyles'
+import {InfoData} from './data/InfoData'
 const App =()=>{
 
     const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +16,7 @@ const App =()=>{
             <NavBar toggle={toggle} />
             <Dropdown isOpen={isOpen} toggle={toggle} />
             <Hero />
-            <InfoSection />
+            <InfoSection {...[InfoData]} />
         </>
     )
 }

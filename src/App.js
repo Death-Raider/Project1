@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
+
+import GlobalStyle from './globalStyles'
 import {NavBar} from './containers/NavBar'
 import {Hero} from './containers/Hero'
-import InfoSection from './containers/InfoSection'
 import Dropdown from './containers/Dropdown'
-import {BrowserRouter as Router} from 'react-router-dom'
-import GlobalStyle from './globalStyles'
-import {InfoData} from './data/InfoData'
+
+import Home from './pages/Home'
+
+
+
 const App =()=>{
 
     const [isOpen, setIsOpen] = useState(false)
@@ -14,9 +17,9 @@ const App =()=>{
         <>
             <GlobalStyle />
             <NavBar toggle={toggle} />
-            <Hero />
-            <InfoSection {...[InfoData]} />
             <Dropdown isOpen={isOpen} toggle={toggle} />
+            <Hero />
+            <Home />
         </>
     )
 }

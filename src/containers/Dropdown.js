@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom'
 import{FaTimes} from'react-icons/fa'
 
 const DropdownContainer = styled.div`
-    position: absolute;
-    z-index: 200;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    z-index: 500;
+    width: 100vw;
+    height: 100vh;
     background: #cd853f;
     display: grid;
     align-items: center;

@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import InfoSection from '../containers/InfoSection'
+import {InfoDataProjects} from '../data/InfoData'
+
 const Projects = () => {
     return (
-        <div>
-            <h1>Projects</h1>
-        </div>
+        <InfoSection InfoData={InfoDataProjects} StyleFunc={()=>{}} />
     )
 }
 export default Projects

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import { useWindowDimensions  } from 'react-native';
 import {Button} from './Button'
 
 const Section = styled.section`
@@ -57,20 +56,11 @@ const ColumnRight = styled.div`
 `;
 
 
-const InfoSection = (InfoData) => {
-
-    const PositionInfo = () =>{
-        const { height, width } = useWindowDimensions();
-        return {
-            position: 'absolute',
-            left: '0',
-            top: ((height<1100)?'100vh':'1100px'),
-            display: 'block',
-        }
-    }
+const InfoSection = ({InfoData,StyleFunc}) => {
+    console.log(InfoData,StyleFunc)
     return (
-        <Section style={PositionInfo()}>
-            {InfoData['0'].map((item,index)=>{
+        <Section style={StyleFunc()}>
+            {InfoData.map((item,index)=>{
                 return(
                     <Container key={index}>
                         <ColumnLeft>

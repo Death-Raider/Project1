@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import InfoSection from '../containers/InfoSection'
+import {InfoDataAbout} from '../data/InfoData'
+
 const About = () => {
     return (
-        <div>
-            <h1>About</h1>
-        </div>
+        <InfoSection InfoData={InfoDataAbout} StyleFunc={()=>{}} />
     )
 }
 

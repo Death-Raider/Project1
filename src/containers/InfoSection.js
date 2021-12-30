@@ -56,8 +56,7 @@ const ColumnRight = styled.div`
 `;
 
 
-const InfoSection = ({InfoData,StyleFunc}) => {
-    console.log(InfoData,StyleFunc)
+const InfoSection = ({InfoData, StyleFunc, ExtraFunc=()=>{}}) => {
     return (
         <Section style={StyleFunc()}>
             {InfoData.map((item,index)=>{
@@ -65,8 +64,9 @@ const InfoSection = ({InfoData,StyleFunc}) => {
                     <Container key={index}>
                         <ColumnLeft>
                             <h1>{item.Heading}</h1>
-                            <p>{item.Para1}</p>
-                            <p>{item.Para2}</p>
+                            {(typeof(item.Para1)==='string'?<p>{item.Para1}</p>:item.Para1())}
+                            {(typeof(item.Para2)==='string'?<p>{item.Para2}</p>:item.Para2())}
+                            {ExtraFunc()}
                             <Button to={item.link} primary="true">{item.BtnLabel}</Button>
                         </ColumnLeft>
                         <ColumnRight reverse={item.reverse}>

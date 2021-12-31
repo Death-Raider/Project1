@@ -159,8 +159,9 @@ predictions. Our model is trained by combining several neural networks which are
     },
     {
         Heading: 'Complex Matrix Visulization',
-        Para1: "" ,
-        Para2: "" ,
+        Para1: `Complex Matrices are not given enough credit for what they do and even when they are used its often introduced as an foreign entity. This project was made to shed light
+on such a misinterpreted topic. This project was made in the form of a youtube video.` ,
+        Para2: "To watch the video click " ,
         BtnShow: 'true',
         BtnLabel:"Visit Project",
         link:"/project3",

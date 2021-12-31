@@ -76,7 +76,7 @@ const NavBar =({toggle})=>{
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to='/connections' primary='false'>Connections</Button>
+                <Button to='/connections' primary='false' show='true'>Connections</Button>
             </NavBtn>
         </Nav>
     )

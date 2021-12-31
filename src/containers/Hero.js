@@ -125,18 +125,18 @@ const Hero =()=>{
     const length = SliderData.length
     const timeout = useRef(null)
 
-    // useEffect(()=>{
-    //     const nextSlide = () =>{
-    //         setCurrent(current=>(current === length-1?0:current+1))
-    //     }
-    //     timeout.current = setTimeout(nextSlide, 5000)
-    //     console.log(timeout.current)
-    //     return function (){
-    //         if(timeout.current){
-    //             clearTimeout(timeout.current)
-    //         }
-    //     }
-    // },[current, length])
+    useEffect(()=>{
+        const nextSlide = () =>{
+            setCurrent(current=>(current === length-1?0:current+1))
+        }
+        timeout.current = setTimeout(nextSlide, 5000)
+        console.log(timeout.current)
+        return function (){
+            if(timeout.current){
+                clearTimeout(timeout.current)
+            }
+        }
+    },[current, length])
 
     const nextSlide = () => {
         if(timeout.current) clearTimeout(timeout.current)
@@ -159,7 +159,7 @@ const Hero =()=>{
                                 <HeroContent>
                                     <h1>{slide.title}</h1>
                                     <p>{slide.description}</p>
-                                    <Button to={slide.path} primary="true"
+                                    <Button to={slide.path} primary="true" show="true"
                                     css={`max-width: 160px`}>
                                         {slide.label}
                                     <Arrow />

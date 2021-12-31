@@ -20,8 +20,8 @@ const Container = styled.div`
 const ColumnLeft = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
     line-height: 1.4;
     padding: 1rem 2rem;
     order: ${({reverse}) => (reverse?'2':'1')};
@@ -46,7 +46,7 @@ const ColumnRight = styled.div`
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain ;
 
         @media screen and (max-width: 768px) {
             width: 90%;
@@ -54,11 +54,10 @@ const ColumnRight = styled.div`
         }
     }
 `;
-
-
 const InfoSection = ({InfoData, StyleFunc, ExtraFunc=()=>{}}) => {
     return (
         <Section style={StyleFunc()}>
+        {ExtraFunc()}
             {InfoData.map((item,index)=>{
                 return(
                     <Container key={index}>
@@ -66,16 +65,17 @@ const InfoSection = ({InfoData, StyleFunc, ExtraFunc=()=>{}}) => {
                             <h1>{item.Heading}</h1>
                             {(typeof(item.Para1)==='string'?<p>{item.Para1}</p>:item.Para1())}
                             {(typeof(item.Para2)==='string'?<p>{item.Para2}</p>:item.Para2())}
-                            {ExtraFunc()}
-                            <Button to={item.link} primary="true">{item.BtnLabel}</Button>
+                            <Button to={item.link} primary="true"
+                                style={{display:(JSON.parse(item.BtnShow)?'flex':'none')}}>
+                                {item.BtnLabel}
+                            </Button>
                         </ColumnLeft>
-                        <ColumnRight reverse={item.reverse}>
-                            <img src={item.image} alt="img1" />
+                        <ColumnRight>
+                            <img src={item.image} alt="img1"/>
                         </ColumnRight>
                     </Container>
                 )
             })}
-
         </Section>
     )
 }

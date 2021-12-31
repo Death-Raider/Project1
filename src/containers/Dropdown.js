@@ -78,7 +78,7 @@ const Dropdown = ({isOpen, toggle}) => {
                     ))}
                 </DropdownMenu>
                 <BtnWrap>
-                    <Button primary='true' round='round' big='true' to='/connections'>
+                    <Button primary='true' round='round' big='true' to='/connections' show='true'>
                         Connections
                     </Button>
                 </BtnWrap>

@@ -321,10 +321,21 @@ representative of the actual accuracy. Currently, I'm working on expanding the d
     },
     {
         Heading: 'Instance Segmentation',
-        Para1: `I have used a U-net layered on top of a mobile net model. Our U-Net model was created by extracting features from the mobile network and feeding them into the U-Net model. Even during
-the training of the U-net, the pre-trained mobile net layers remained fixed. There were also 21 classes for segmentation, and there was a substantial imbalance in the dataset due to me having to create
-the dataset myself, and it is time-consuming more than the yolov5 data. So far, I have only collected 64 images and have not used any augmentation; after collecting 100 images, I intend to use an
-enhancement to make a noticeable impact!` ,
+        Para1: ()=>(
+            <ul>
+                <li>
+                    I have used a U-net layered on top of a mobile net model. Our U-Net model was created by extracting features from the mobile network and feeding them into the U-Net model. Even during
+                    the training of the U-net, the pre-trained mobile net layers remained fixed.
+                </li><br />
+                <li>
+                    There were also 21 classes for segmentation, and there was a substantial imbalance in the dataset due to me having to create the dataset myself, and it is time-consuming more than the yolov5 data.
+                </li><br />
+                <li>
+                    So far, I have only collected 64 images and have not used any augmentation; after collecting 100 images, I intend to use an
+                    enhancement to make a noticeable impact!
+                </li><br />
+            </ul>
+        ),
         Para2: `TFDS was a new experience altogether, and it was tedious to customize the hyperparameters. My training strategy uses the Mean Squared Error (MSE), an unconventional loss function.
 Categorial Cross-Entropy (CCE) is usually used to learn patterns for this task, but MSE learned faster than CCE.` ,
         BtnShow: 'false',

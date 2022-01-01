@@ -15,7 +15,6 @@ import Connections from './pages/Connections'
 import Projects from './pages/Projects'
 import Project1 from './pages/Project1'
 import Project2 from './pages/Project2'
-import Project3 from './pages/Project3'
 
 
 const App =()=>{
@@ -35,7 +34,6 @@ const App =()=>{
             <Route path="/projects" element={<Projects />} />
             <Route path="/project1" element={<Project1 />} />
             <Route path="/project2" element={<Project2 />} />
-            <Route path="/project3" element={<Project3 />} />
             </Routes>
         </>
     )

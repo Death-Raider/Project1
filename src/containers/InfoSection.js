@@ -12,9 +12,11 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 800px;
+    font-size: 15px;
 
     @media screen and (max-width: 768px){
         grid-template-columns: 1fr;
+        font-size: 3vw;
     }
 `;
 const ColumnLeft = styled.div`
@@ -46,7 +48,8 @@ const ColumnRight = styled.div`
     img {
         width: 100%;
         height: 100%;
-        object-fit: contain ;
+        object-fit: contain;
+        overflow: hidden;
 
         @media screen and (max-width: 768px) {
             width: 90%;

@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
     html, body {
         overflow-x: hidden;
-        background: powderblue;
+        background: mintcream;
+        // background: repeating-radial-gradient(slategray, transparent 1500px);
     }
 `;
 export default GlobalStyle

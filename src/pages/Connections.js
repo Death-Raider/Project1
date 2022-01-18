@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import InfoSection from '../containers/InfoSection'
 import {InfoDataConnections} from '../data/InfoData'
 
+
+
 const Wrapper = styled.h1`
     text-align: center;
     margin-top: 2rem;

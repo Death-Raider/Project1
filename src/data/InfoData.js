@@ -27,7 +27,8 @@ through my various projects on Artificial Intelligence and the self-study needed
 Immunology and Psychology; I would love an opportunity to build upon them further.`,
         BtnShow: 'true',
         BtnLabel:"View Resume",
-        link:"/",
+        link:"",
+        href:"https://arxiv.org/pdf/1509.02971.pdf",
         image: Me1,
         reverse: 'false',
         delay: 100
@@ -42,7 +43,7 @@ was the project that allowed me to apply and test AI theory firsthand, boosting 
 also made a Rainfall Prediction AI which allows me to take the entire world rainfall data of the Earth and make future predictions on the rainfall pattern with
 an accuracy of 90%. Another currently ongoing project is Computer Vision, which uses three different convolutional AI models attempting to mimic the human
 players in the game Minecraft. Among the various projects, these were my top three projects which make me proud.` ,
-    BtnShow: 'true',
+        BtnShow: 'true',
         BtnLabel:"Visit Projects",
         link:"/projects",
         image: "",
@@ -97,7 +98,7 @@ to align, and I believe AI could revolutionize the medical field if more effort 
         BtnLabel:"About",
         link:"/about",
         image: Me1,
-        reverse: 'false',
+        reverse: 'true',
         delay: 100
     },
     {
@@ -106,7 +107,8 @@ to align, and I believe AI could revolutionize the medical field if more effort 
         Para2: "See in full length in NPM website." ,
         BtnShow: 'true',
         BtnLabel:"View NPM site",
-        link:"/projects",
+        link:"",
+        href:"https://www.npmjs.com/package/@death_raider/neural-network",
         image: Npm,
         reverse: 'false',
         delay: 100
@@ -167,7 +169,8 @@ on such a misinterpreted topic. This project was made in the form of a youtube v
         Para2: "To watch the video click " ,
         BtnShow: 'true',
         BtnLabel:"Visit Project",
-        link:"", // TODO: ADD LINK
+        link:"",
+        href: "https://www.youtube.com/watch?v=BOkwMR9-KLU",
         image: CMatrix,
         reverse: 'false',
         delay: 100

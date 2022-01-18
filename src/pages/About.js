@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-
+import styled, {css} from 'styled-components'
+import {Button} from '../containers/Button'
 import InfoSection from '../containers/InfoSection'
 import {InfoDataAbout} from '../data/InfoData'
 

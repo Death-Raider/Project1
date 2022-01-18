@@ -130,7 +130,6 @@ const Hero =()=>{
             setCurrent(current=>(current === length-1?0:current+1))
         }
         timeout.current = setTimeout(nextSlide, 5000)
-        console.log(timeout.current)
         return function (){
             if(timeout.current){
                 clearTimeout(timeout.current)

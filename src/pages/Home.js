@@ -16,7 +16,6 @@ const Home = () => {
             display: 'block'
         }
     }
-    console.log(InfoDataHome)
     return (<>
 
         <Hero />

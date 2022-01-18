@@ -182,9 +182,8 @@ export const InfoDataProject1 = [
         Para1: `To investigate predictions based on the rainfall data and understand how we can improve on current methods to better locate natural
 disasters like rain induced flooding and landslides or better predict rain patterns for rainfed agriculture using Machine Learning algorithms for the
 predictions. Our model is trained by combining several neural networks which are trained seperately for seperate task. ` ,
-        Para2: `There were 3 AI models used and one fixed initial convolutional layer. The purpose of seperating out the model into parts was to increase
-accuracy of each part, resulting in a higher overall accuracy. Without this seperation we had gotten a 70% accuracy at best and using the seperation we have
-increased our accuracy to 90%!` ,
+        Para2: `One initial convolutional layer is fixed in addition to the three AI models. Separating the model into parts was done to increase the
+accuracy of every step, ultimately resulting in higher overall accuracy. As a result of this separation, our accuracy increased from 70% to 90%.` ,
         BtnLabel:"",
         BtnShow: 'false',
         link:"",
@@ -195,7 +194,7 @@ increased our accuracy to 90%!` ,
     {
         Heading: 'Introduction',
         Para1: `There is a lot of data present and a lot of our daily lives depend on it from checking the weather to finding the fastest route to
-ur destination. In this project we looking into a project on which our team has created using data provided by NASA and we investigate how this
+your destination. In this project we looking into a project on which our team has created using data provided by NASA and we investigate how this
 project would effect people and how data collection can be improved for better usage in the future.` ,
         Para2: `Our aim with this project is to gain insight in how rainfall data is used to make predictions (more that just predicting when the
 next rain fall) like prediciting probability of landslides and also for arrival and retreat of monsoon and so on. We have made our own model to
@@ -317,7 +316,8 @@ output image and format. The majority of the time went into learning the module 
 representative of the actual accuracy. Currently, I'm working on expanding the dataset.` ,
         BtnShow: 'true',
         BtnLabel:"Visit Dataset",
-        link:"", // TODO: add link
+        link:"",
+        href:"https://app.roboflow.com/oragimirox-gmail-com/minecraft-mob/images/?split=train",
         image: Minecraft,
         reverse: 'false',
         delay: 100

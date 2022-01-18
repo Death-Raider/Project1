@@ -2,88 +2,6 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {Button} from './Button'
 
-// const InfoSection = ({InfoData, StyleFunc, ExtraFunc=()=>{}}) => {
-//     let Section = styled.section`
-//         width: 100%;
-//         height: 100%;
-//         padding: 4rem 0rem;
-//     `;
-//
-//     return (
-//         <Section style={StyleFunc()}>
-//         {ExtraFunc()}
-//             {InfoData.map((item,index)=>{
-//                 let Container = styled.div`
-//                     padding: 3rem calc((100vw-1300px)/2);
-//                     display: grid;
-//                     grid-template-columns: 1fr 1fr;
-//                     grid-template-rows: 800px;
-//                     font-size: 15px;
-//
-//                     @media screen and (max-width: 768px){
-//                         grid-template-columns: 1fr;
-//                         font-size: 3vw;
-//                     }
-//                 `;
-//                 let ColumnLeft = styled.div`
-//                     display: flex;
-//                     flex-direction: column;
-//                     align-items: flex-start;
-//                     justify-content: center;
-//                     line-height: 1.4;
-//                     padding: 1rem 2rem;
-//                     order: ${({reverse}) => (reverse?'2':'1')};
-//                     h1 {
-//                         margin-bottom: 1rem;
-//                         font-size: clamp(1.5rem, 6vw, 2rem)
-//                     }
-//                     p {
-//                         margin-bottom: 2rem;
-//                     }
-//                 `;
-//                 let ColumnRight = styled.div`
-//                     padding: 1rem 2rem;
-//                     order: ${({reverse}) => (reverse?'1':'2')};
-//                     display: flex;
-//                     justify-content: center;
-//                     align-items: center;
-//
-//                     @media screen and (max-width: 768px){
-//                         order: ${({reverse}) => (reverse?'2':'1')};
-//                     }
-//                     img {
-//                         width: 100%;
-//                         height: 100%;
-//                         object-fit: contain;
-//                         overflow: hidden;
-//
-//                         @media screen and (max-width: 768px) {
-//                             width: 90%;
-//                             height: 90%;
-//                         }
-//                     }
-//                 `;
-//
-//                 return(
-//                     <Container key={index}>
-//                         <ColumnLeft reverse={item.reverse}>
-//                             <h1>{item.Heading}</h1>
-//                             {(typeof(item.Para1)==='string'?<p>{item.Para1}</p>:item.Para1())}
-//                             {(typeof(item.Para2)==='string'?<p>{item.Para2}</p>:item.Para2())}
-//                             <Button to={item.link} primary="true"
-//                                 style={{display:(JSON.parse(item.BtnShow)?'flex':'none')}}>
-//                                 {item.BtnLabel}
-//                             </Button>
-//                         </ColumnLeft>
-//                         <ColumnRight reverse={item.reverse}>
-//                             <img src={item.image} alt="img1"/>
-//                         </ColumnRight>
-//                     </Container>
-//                 )
-//             })}
-//         </Section>
-//     )
-// }
 const Section = styled.section`
     width: 100%;
     height: 100%;
@@ -122,7 +40,7 @@ const Redirect = styled.a`
     }
 `;
 
-const CreateInfoBox = (Data,row,column) => {
+const createInfoBox = (Data,row,column, key) => {
     let InfoBoxCSS = css`
         display: flex;
         flex-direction: column;
@@ -150,7 +68,7 @@ const CreateInfoBox = (Data,row,column) => {
     `;
 
     return (
-        <InfoBox img={Data.image===""}>
+        <InfoBox img={Data.image===""} key= {key}>
             <h1>{Data.Heading}</h1>
             {(typeof(Data.Para1)==='string'?<p>{Data.Para1}</p>:Data.Para1())}
             {(typeof(Data.Para2)==='string'?<p>{Data.Para2}</p>:Data.Para2())}
@@ -166,7 +84,7 @@ const CreateInfoBox = (Data,row,column) => {
         </InfoBox>
     )
 }
-const CreateImgBox = (Data, row, column) => {
+const createImgBox = (Data, row, column, key) => {
     let ImgBoxCSS = css`
         padding: 1rem 2rem;
         display: flex;
@@ -198,7 +116,7 @@ const CreateImgBox = (Data, row, column) => {
     `;
 
     return (
-        <ImgBox>
+        <ImgBox key = {key}>
             <img src={Data.image} style={{display:(Data.image===""?'none':'flex')}} />
         </ImgBox>
     )
@@ -206,10 +124,10 @@ const CreateImgBox = (Data, row, column) => {
 }
 
 
-function* ContainerData(Data){
+function* containerData(Data){
     for(let i = 0; i < Data.length; i++){
-        yield CreateInfoBox(Data[i],i+1,1)
-        yield CreateImgBox(Data[i],i+1,2)
+        yield createInfoBox(Data[i],i+1,1, 2*i)
+        yield createImgBox(Data[i],i+1,2, 2*i+1)
     }
 }
 
@@ -218,7 +136,7 @@ const InfoSection = ({InfoData, StyleFunc, ExtraFunc=()=>{}}) => {
         <Section style={StyleFunc()}>
             {ExtraFunc()}
             <Container>
-                {[...ContainerData(InfoData)].map((item)=>item)}
+                {[...containerData(InfoData)].map((item)=>item)}
             </Container>
         </Section>
     )

@@ -9,7 +9,8 @@ export const SliderData = [
         img: Npm,
         label:'View Project',
         description:'Self made Neural Network package',
-        path: '/', // TODO: Add direct link
+        path: '', // TODO: Add direct link
+        href:"https://www.npmjs.com/package/@death_raider/neural-network",
         alt: "NPM project"
     },
     {
@@ -33,7 +34,8 @@ export const SliderData = [
         img: CMatrix,
         label:'View Project',
         description:'Providing key insight to their workings',
-        path: '/project3',
+        path: '',
+        href: "https://www.youtube.com/watch?v=BOkwMR9-KLU",
         alt: "Complex Matrix"
     }
 ]

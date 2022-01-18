@@ -16,6 +16,27 @@ const HeroSection = styled.section`
     flex: 1;
 
 `;
+const Redirect = styled.a`
+    background: #000;
+    white-space: nowrap;
+    outline:none;
+    border:none;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    display: ${({show})=>(show?'flex':'none')};
+    justify-content: center;
+    align-items: center;
+    padding: ${({big})=>(big?'16px 40px':'14px 24px')};
+    color: #fff;
+    font-size: ${({big})=>(big?'20px':'14px')}
+
+    &:hover{
+        transform: translateY(-2px);
+    }
+`;
 const SliderButtons = styled.div`
     position: absolute;
     bottom: 50px;
@@ -158,11 +179,17 @@ const Hero =()=>{
                                 <HeroContent>
                                     <h1>{slide.title}</h1>
                                     <p>{slide.description}</p>
-                                    <Button to={slide.path} primary="true" show="true"
-                                    css={`max-width: 160px`}>
-                                        {slide.label}
-                                    <Arrow />
-                                    </Button>
+                                    { (slide.path==="")?
+                                        <Redirect show="true" href={slide.href}>
+                                            {slide.label}
+                                            <Arrow />
+                                        </Redirect>:
+                                        <Button to={slide.path} primary="true" show="true"
+                                        css={`max-width: 160px`}>
+                                            {slide.label}
+                                            <Arrow />
+                                        </Button>
+                                    }
                                 </HeroContent>
                             </HeroSlider>
                         )}

@@ -115,7 +115,7 @@ to align, and I believe AI could revolutionize the medical field if more effort 
     },
     {
         Heading: 'Rainfall Prediction --Top Project-2',
-        Para1: " To investigate predictions based on the rainfall data and understand how we can improve on current methods to better locate natural disasters" ,
+        Para1: "To investigate predictions based on the rainfall data and understand how we can improve on current methods to better locate natural disasters" ,
         Para2: "See in full length in the Projects section." ,
         BtnShow: 'true',
         BtnLabel:"View all Projects",
@@ -126,7 +126,7 @@ to align, and I believe AI could revolutionize the medical field if more effort 
     },
     {
         Heading: 'Minecraft Vision --Top Project-3',
-        Para1: `I use 2 different AI methods ( bounding box and Instance segmentation ) to precieve the minecraft world as a human would in attempts to
+        Para1: `I use 2 different AI methods (bounding box and Instance segmentation) to precieve the minecraft world as a human would in attempts to
 create a self acting free world player.` ,
         Para2: "See in full length in the Projects section." ,
         BtnShow: 'true',
@@ -152,9 +152,10 @@ predictions. Our model is trained by combining several neural networks which are
         delay: 100
     },
     {
-        Heading: 'Minecraft Vision --Top Project-3',
-        Para1: "" ,
-        Para2: "" ,
+        Heading: 'Minecraft Vision (in progress) --Top Project-3',
+        Para1: `High level summary: Using two different types of computer vision AI to view the screen and detect objects and also segment the surroundings to make way for a third neural network using
+genetic algorithm to train itself and move in the world.` ,
+        Para2: "Full details can be seen by visiting the Rainfall predictor page below",
         BtnShow: 'true',
         BtnLabel:"Visit Project",
         link:"/project2",
@@ -289,7 +290,7 @@ sky, etc.` ,
         BtnShow: 'false',
         BtnLabel:"",
         link:"",
-        image: Minecraft,
+        image: "",
         reverse: 'false',
         delay: 100
     },
@@ -303,7 +304,7 @@ without a solid and enforceable goal.` ,
         BtnShow: 'false',
         BtnLabel:"",
         link:"",
-        image: Minecraft,
+        image: "",
         reverse: 'false',
         delay: 100
     },
@@ -351,11 +352,11 @@ Categorial Cross-Entropy (CCE) is usually used to learn patterns for this task, 
     {
         Heading: 'Movement',
         Para1: `--inprogress--` ,
-        Para2: `--inprogress--` ,
+        Para2: `` ,
         BtnShow: 'false',
         BtnLabel:"",
         link:"",
-        image: Minecraft,
+        image: "",
         reverse: 'false',
         delay: 100
     }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 
 import InfoSection from '../containers/InfoSection'
@@ -12,6 +12,9 @@ const Wrapper = styled.h1`
 `;
 
 const Projects = () => {
+    useEffect(() => {
+            window.scrollTo(0, 0)
+        }, [])
     return (
         <InfoSection InfoData={InfoDataProjects} StyleFunc={()=>{}} ExtraFunc={()=>(
             <Wrapper>My Projects</Wrapper>

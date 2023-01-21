@@ -20,12 +20,12 @@ export const InfoDataAbout = [
     {
         Heading: "About me",
         Para1: `My name is Darsh Kachroo, and I'm a senior in high school majoring in Mathematics and Biology in India. I have ambitions to
-study at Eth Zurich and major in Math and Physics.` ,
+study at ETH Zurich and major in Math and Physics.` ,
         Para2: `I want my career to be based on research in AI with medicine as it allows for all my interests to align, and I believe AI
 could revolutionize the medical field if more effort is applied. I have a strong desire and discipline for my goals and dreams expressed
 through my various projects on Artificial Intelligence and the self-study needed for it. My interests in the medical field lay with
 Immunology and Psychology; I would love an opportunity to build upon them further.`,
-        BtnShow: 'true',
+        BtnShow: 'false',
         BtnLabel:"View Resume",
         link:"",
         href:"https://arxiv.org/pdf/1509.02971.pdf",

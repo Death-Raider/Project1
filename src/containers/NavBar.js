@@ -23,11 +23,13 @@ const NavLink = css`
     height: 100%;
     cursor: pointer;
     text-decoration: none;
+    font-size:170%;
 `;
 const Home = styled(Link)`
     ${NavLink};
     padding: 1rem 0rem;
     font-style: italic;
+    font-size: 200%;
 `;
 const NavMenu = styled.div`
     display:flex;
@@ -58,6 +60,7 @@ const NavBtn = styled.div`
     display:flex;
     align-items:center;
     margin-right: 24px;
+    font-size:170%;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -76,7 +79,7 @@ const NavBar =({toggle})=>{
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to='/connections' primary='false' show='true'>Connections</Button>
+                <Button to='/connections' primary='false' show='true' >Connections</Button>
             </NavBtn>
         </Nav>
     )

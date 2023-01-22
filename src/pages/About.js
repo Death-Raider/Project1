@@ -9,7 +9,7 @@ const About = () => {
         window.scrollTo(0, 0)
     }, [])
     return (
-        <InfoSection InfoData={InfoDataAbout} StyleFunc={()=>{}} />
+        <InfoSection InfoData={InfoDataAbout} StyleFunc={()=>{}} /> 
     )
 }
 

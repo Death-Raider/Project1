@@ -1,5 +1,5 @@
-import Me1 from '../images/ME1.jpg'
-// import Me2 from '../images/Me2.jpg'
+import Me1 from '../images/ME2.jpg'
+import Resume from '../images/resume.pdf'
 import DataImg from '../images/dataImg.jfif'
 
 import Connection from '../images/connections.png'
@@ -19,16 +19,15 @@ import Process from '../images/Process.png'
 export const InfoDataAbout = [
     {
         Heading: "About me",
-        Para1: `My name is Darsh Kachroo, and I'm a senior in high school majoring in Mathematics and Biology in India. I have ambitions to
-study at ETH Zurich and major in Math and Physics.` ,
+        Para1: `My name is Darsh Kachroo, and I'm a high school passout having majoring in Mathematics and Biology in India. Having 
+done a variety of projects not only those included here, I believe that I am capable in my abilities as a Software and Data analyst.`,
         Para2: `I want my career to be based on research in AI with medicine as it allows for all my interests to align, and I believe AI
 could revolutionize the medical field if more effort is applied. I have a strong desire and discipline for my goals and dreams expressed
-through my various projects on Artificial Intelligence and the self-study needed for it. My interests in the medical field lay with
-Immunology and Psychology; I would love an opportunity to build upon them further.`,
-        BtnShow: 'false',
-        BtnLabel:"View Resume",
+through my various projects on Artificial Intelligence and the self-study needed for it. I would love an opportunity to build upon them further.`,
+        BtnShow: 'true',
+        BtnLabel:"Download Resume",
         link:"",
-        href:"https://arxiv.org/pdf/1509.02971.pdf",
+        href:Resume,
         image: Me1,
         reverse: 'false',
         delay: 100
@@ -40,8 +39,8 @@ Quantum-Mechanic, whereas my personal interests are working out, Reading Novels,
 between my professional and personal interests which reduced burnout and increased my productivity.`,
         Para2: `My accomplishments are few, but they carry deeply personal meaning to me. I have made a Machine Learning Package on NPM from scratch, and it
 was the project that allowed me to apply and test AI theory firsthand, boosting my confidence. I learned a lot from this experience. Building on that, I have
-also made a Rainfall Prediction AI which allows me to take the entire world rainfall data of the Earth and make future predictions on the rainfall pattern with
-an accuracy of 90%. Another currently ongoing project is Computer Vision, which uses three different convolutional AI models attempting to mimic the human
+also made a Rainfall Prediction AI which allows me to take the entire world rainfall data and make future predictions on the rainfall pattern with
+an accuracy of 90%. Another ongoing project is Computer Vision, which uses three different convolutional AI models attempting to mimic the human
 players in the game Minecraft. Among the various projects, these were my top three projects which make me proud.` ,
         BtnShow: 'true',
         BtnLabel:"Visit Projects",
@@ -57,9 +56,12 @@ export const InfoDataConnections = [
         Para1: ()=>{
             return (
                 <>
+                <p>
+                    I am active in the following sites and I can be reached to via these platforms for non buisness related queries.
+                </p>
                     <ul>
                         <li> Discord - Benzo#5968 </li>
-                        <li> Instagram - amazing_bro_99 </li>
+                        <li> Instagram - @darsh_kachroo </li>
                         <li> NPM - @death_raider  </li>
                         <li> Github - Death-Raider </li>
                     </ul><br></br>
@@ -77,7 +79,7 @@ export const InfoDataConnections = [
 export const InfoDataContact = [
     {
         Heading: 'Email',
-        Para1: "Contact me at oragimirox@gmail.com",
+        Para1: "Contact me at kachroo.darsh@gmail.com or on linkedin (Darsh Kachroo) for buisness related queries.",
         Para2: "A reply will be provided within 1-2 days. Till then please check out the Projects section",
         BtnShow: 'true',
         BtnLabel:"Go to Projects",
@@ -90,9 +92,8 @@ export const InfoDataContact = [
 export const InfoDataHome = [
     {
         Heading: 'About Me',
-        Para1: `My name is Darsh Kachroo, and I'm a senior in high school majoring in Mathematics and Biology in India. I have ambitions to
-study at Eth Zurich and major in Math and Physics.I want my career to be based on research in AI with medicine as it allows for all my interests
-to align, and I believe AI could revolutionize the medical field if more effort is applied.`,
+        Para1: `My name is Darsh Kachroo, and I'm a high school passout having majoring in Mathematics and Biology in India. Having 
+done a variety of projects not only those included here, I believe that I am capable in my abilities as a Software and Data analyst.`,
         Para2: "See in full length in the About section." ,
         BtnShow: 'true',
         BtnLabel:"About",
@@ -340,7 +341,7 @@ representative of the actual accuracy. Currently, I'm working on expanding the d
                 </li><br />
             </ul>
         ),
-        Para2: `TFDS was a new experience altogether, and it was tedious to customize the hyperparameters. My training strategy uses the Mean Squared Error (MSE), an unconventional loss function.
+        Para2: `TFDS was a new experience altogether, it was tedious to customize the hyperparameters. My training strategy uses the Mean Squared Error (MSE), an unconventional loss function.
 Categorial Cross-Entropy (CCE) is usually used to learn patterns for this task, but MSE learned faster than CCE.` ,
         BtnShow: 'false',
         BtnLabel:"",

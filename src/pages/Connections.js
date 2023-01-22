@@ -7,10 +7,13 @@ import {InfoDataConnections} from '../data/InfoData'
 
 
 const Wrapper = styled.h1`
+    position: relative;
     text-align: center;
     margin-top: 2rem;
     padding: 1.5rem;
     font-size: xxx-large;
+    align-self: center;
+
 `;
 
 const Connections = () => {

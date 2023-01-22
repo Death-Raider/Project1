@@ -42,18 +42,27 @@ const Redirect = styled.a`
 
 const createInfoBox = (Data,row,column, key) => {
     let InfoBoxCSS = css`
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content:  ${({img})=>(img?"flex-start":"center")};
         line-height: 1.4;
         padding: 1rem 2rem;
+        font-size: 150%;
+        display: flex;
+        
+        
         h1 {
             margin-bottom: 1rem;
             font-size: clamp(1.5rem, 6vw, 2rem)
+            display: flex;
+            position: relative;
+            align-self: center;
         }
         p {
+            display:flex;
+            flex-wrap: wrap;
             margin-bottom: 2rem;
+            text-align: justify;
         }
     `;
 
@@ -74,10 +83,10 @@ const createInfoBox = (Data,row,column, key) => {
             {(typeof(Data.Para2)==='string'?<p>{Data.Para2}</p>:Data.Para2())}
             {
                 (Data.link)===''?
-                <Redirect style={{display:(JSON.parse(Data.BtnShow)?'flex':'none')}} href={Data.href}>
+                <Redirect style={{display:(JSON.parse(Data.BtnShow)?'flex':'none')}} css={"display:flex;text-align: justify;"} href={Data.href} download>
                     {Data.BtnLabel}
                 </Redirect>:
-                <Button style={{display:(JSON.parse(Data.BtnShow)?'flex':'none')}} primary="true" to={Data.link}>
+                <Button style={{display:(JSON.parse(Data.BtnShow)?'flex':'none')}} css={"display:flex;text-align: justify;"} primary="true" to={Data.link}>
                     {Data.BtnLabel}
                 </Button>
             }
@@ -93,14 +102,20 @@ const createImgBox = (Data, row, column, key) => {
 
         img {
             padding: 1rem;
+            overflow: hidden;
+            object-fit:contain;
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            overflow: hidden;
-
+            animation: load 5s;
             @media screen and (max-width: 768px) {
                 width: 90%;
                 height: 90%;
+            }
+            @keyframes load{
+                from {opacity:0%;}
+                to {
+                    opacity: 100%;
+                }
             }
         }
     `;
@@ -111,13 +126,14 @@ const createImgBox = (Data, row, column, key) => {
             grid-column: 1/span 1 ;
             grid-row: ${row*2}/span 1 ;
         }
+
         grid-column: ${column}/span 1 ;
         grid-row: ${row}/span 1 ;
     `;
 
     return (
         <ImgBox key = {key}>
-            <img src={Data.image} style={{display:(Data.image===""?'none':'flex')}} />
+            <img onClick={()=>{window.open(Data.image,"_blank")}} src={Data.image} style={{display:(Data.image===""?'none':'flex')}} />
         </ImgBox>
     )
 

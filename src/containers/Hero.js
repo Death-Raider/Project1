@@ -52,7 +52,7 @@ const HeroWrapper = styled.div`
     align-items: center;
     overflow: hidden;
     position: relative;
-
+    font-size: 200%;
 `;
 
 const HeroSlide = styled.div`

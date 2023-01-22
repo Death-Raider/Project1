@@ -35,7 +35,7 @@ through my various projects on Artificial Intelligence and the self-study needed
     {
         Heading: 'My Intrests and Accomplishments',
         Para1: `My professional interests lie in vast topics like Linear Algebra, Calculus, Machine Learning, Organic Chemistry, Kinematics, and
-Quantum-Mechanic, whereas my personal interests are working out, Reading Novels, and participating in sports like football. I created a good balance
+Quantum-Mechanics, whereas my personal interests are working out, reading novels, and participating in sports like football. I created a good balance
 between my professional and personal interests which reduced burnout and increased my productivity.`,
         Para2: `My accomplishments are few, but they carry deeply personal meaning to me. I have made a Machine Learning Package on NPM from scratch, and it
 was the project that allowed me to apply and test AI theory firsthand, boosting my confidence. I learned a lot from this experience. Building on that, I have
